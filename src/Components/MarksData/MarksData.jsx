@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { Bar, BarChart, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, Line, LineChart, XAxis, YAxis } from 'recharts';
 
 const MarksData = ({marksPromise}) => {
 
@@ -30,6 +30,12 @@ const MarksData = ({marksPromise}) => {
                 <Bar dataKey='physics' fill='red'></Bar>
                 <Bar dataKey='avg' fill='purple'></Bar>
             </BarChart>
+            <br></br>
+            <LineChart width={500} height={300} data={marksChartData}>
+                <XAxis dataKey='name'></XAxis>
+                <YAxis></YAxis>
+                <Line dataKey='math' fill='purple' stroke='purple'></Line>
+            </LineChart>
         </div>
     );
 };

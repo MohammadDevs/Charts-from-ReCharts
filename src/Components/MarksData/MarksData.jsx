@@ -20,7 +20,7 @@ const MarksData = ({marksPromise}) => {
         student.avg = avg;
         return student;
     })
-    console.log(marksChartData);
+    // console.log(marksChartData);
     return (
         <div className='mt-20'>
             <BarChart width={500} height={400} data={marksChartData}>

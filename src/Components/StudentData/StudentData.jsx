@@ -13,7 +13,7 @@ const StudentData = ({marksPromise}) => {
 
         return student;
     })
-    console.log(chartData);
+    // console.log(chartData);
     return (
         <div>
             

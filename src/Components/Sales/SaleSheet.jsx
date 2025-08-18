@@ -13,7 +13,7 @@ const SaleSheet = ({salesPromise}) => {
         return sales;
     });
     return (
-        <div className='mt-10'>
+        <div>
             <BarChart width={600} height={400} data={salesChart}>
                 <XAxis dataKey='month'></XAxis>
                 <YAxis></YAxis>

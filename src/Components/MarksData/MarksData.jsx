@@ -22,7 +22,7 @@ const MarksData = ({marksPromise}) => {
     })
     // console.log(marksChartData);
     return (
-        <div className='mt-20'>
+        <div>
             <BarChart width={500} height={400} data={marksChartData}>
                 <XAxis dataKey='name'></XAxis>
                 <YAxis></YAxis>
@@ -31,11 +31,11 @@ const MarksData = ({marksPromise}) => {
                 <Bar dataKey='avg' fill='purple'></Bar>
                 <Tooltip cursor={{fill: "transparent"}} content={<div className='bg-amber-50 p-2 rounded-2xl text-xl shadow-xl'>This is Marks data</div>}></Tooltip>
             </BarChart>
-            <br></br>
             <LineChart width={500} height={300} data={marksChartData}>
                 <XAxis dataKey='name'></XAxis>
                 <YAxis></YAxis>
                 <Line dataKey='math' fill='purple' stroke='purple'></Line>
+                <Tooltip></Tooltip>
             </LineChart>
         </div>
     );

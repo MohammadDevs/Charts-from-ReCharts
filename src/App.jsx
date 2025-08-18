@@ -11,8 +11,8 @@ function App() {
 const salesPromise = axios.get('saleSheet.json');
 
   return (
-    <>
-      <Suspense fallback={<span className='loading loading-spinner loading-lg'></span>}>
+      <div className='flex justify-around pt-10'>
+        <Suspense fallback={<span className='loading loading-spinner loading-lg'></span>}>
         <MarksData marksPromise={marksPromise}></MarksData>
       </Suspense>
       <Suspense fallback={<span className='loading loading-spinner loading-lg'></span>}>
@@ -22,7 +22,7 @@ const salesPromise = axios.get('saleSheet.json');
       <Suspense fallback={<span className='loading loading-spinner loading-lg'></span>}>
         <SaleSheet salesPromise={salesPromise}></SaleSheet>
       </Suspense>
-    </>
+      </div>
   )
 }
 

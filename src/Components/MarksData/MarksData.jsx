@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { Bar, BarChart, Line, LineChart, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 const MarksData = ({marksPromise}) => {
 
@@ -29,6 +29,7 @@ const MarksData = ({marksPromise}) => {
                 <Bar dataKey='math' fill='green'></Bar>
                 <Bar dataKey='physics' fill='red'></Bar>
                 <Bar dataKey='avg' fill='purple'></Bar>
+                <Tooltip cursor={{fill: "transparent"}} content={<div className='bg-amber-50 p-2 rounded-2xl text-xl shadow-xl'>This is Marks data</div>}></Tooltip>
             </BarChart>
             <br></br>
             <LineChart width={500} height={300} data={marksChartData}>

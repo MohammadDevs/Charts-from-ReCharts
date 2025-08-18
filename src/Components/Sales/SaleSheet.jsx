@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { Bar, BarChart, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 const SaleSheet = ({salesPromise}) => {
     const salesDataRes = use(salesPromise)
@@ -13,10 +13,11 @@ const SaleSheet = ({salesPromise}) => {
         return sales;
     });
     return (
-        <div>
+        <div className='mt-10'>
             <BarChart width={600} height={400} data={salesChart}>
                 <XAxis dataKey='month'></XAxis>
                 <YAxis></YAxis>
+                <Tooltip cursor={{fill: 'transparent'}}></Tooltip>
                 <Bar dataKey='sales' fill='gray'></Bar>
             </BarChart>
         </div>
